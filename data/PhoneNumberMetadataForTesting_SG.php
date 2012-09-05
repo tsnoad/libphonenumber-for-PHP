@@ -2,36 +2,41 @@
 return array (
   'generalDesc' => 
   array (
-    'NationalNumberPattern' => '[13689]\\d{7,10}',
-    'PossibleNumberPattern' => '
-          \\d{8}|
-          \\d{10,11}
+    'NationalNumberPattern' => '
+          [36]\\d{7}|
+          [17-9]\\d{7,10}
         ',
+    'PossibleNumberPattern' => '\\d{8,11}',
     'ExampleNumber' => '',
   ),
   'fixedLine' => 
   array (
-    'NationalNumberPattern' => '[36]\\d{7}',
+    'NationalNumberPattern' => '6[1-9]\\d{6}',
     'PossibleNumberPattern' => '\\d{8}',
-    'ExampleNumber' => '',
+    'ExampleNumber' => '61234567',
   ),
   'mobile' => 
   array (
-    'NationalNumberPattern' => '[89]\\d{7}',
+    'NationalNumberPattern' => '
+          (?:
+            8[1-7]|
+            9[0-8]
+          )\\d{6}
+        ',
     'PossibleNumberPattern' => '\\d{8}',
-    'ExampleNumber' => '',
+    'ExampleNumber' => '81234567',
   ),
   'tollFree' => 
   array (
     'NationalNumberPattern' => '1?800\\d{7}',
     'PossibleNumberPattern' => '\\d{10,11}',
-    'ExampleNumber' => '',
+    'ExampleNumber' => '18001234567',
   ),
   'premiumRate' => 
   array (
     'NationalNumberPattern' => '1900\\d{7}',
     'PossibleNumberPattern' => '\\d{11}',
-    'ExampleNumber' => '',
+    'ExampleNumber' => '19001234567',
   ),
   'sharedCost' => 
   array (
@@ -48,24 +53,26 @@ return array (
   'id' => 'SG',
   'countryCode' => 65,
   'internationalPrefix' => '0[0-3][0-9]',
-  'nationalPrefixForParsing' => '777777',
   'sameMobileAndFixedLinePattern' => false,
   'numberFormat' => 
   array (
     0 => 
     array (
-      'pattern' => '(\\d{4})(\\d{4})',
+      'pattern' => '([3689]\\d{3})(\\d{4})',
       'format' => '$1 $2',
       'leadingDigitsPatterns' => 
       array (
-        0 => '[369]|8[1-9]',
+        0 => '
+            [369]|
+            8[1-9]
+          ',
       ),
       'nationalPrefixFormattingRule' => '',
       'domesticCarrierCodeFormattingRule' => '',
     ),
     1 => 
     array (
-      'pattern' => '(\\d{4})(\\d{3})(\\d{4})',
+      'pattern' => '(1[89]00)(\\d{3})(\\d{4})',
       'format' => '$1 $2 $3',
       'leadingDigitsPatterns' => 
       array (
@@ -76,11 +83,22 @@ return array (
     ),
     2 => 
     array (
-      'pattern' => '(\\d{3})(\\d{3})(\\d{4})',
+      'pattern' => '(7000)(\\d{4})(\\d{3})',
       'format' => '$1 $2 $3',
       'leadingDigitsPatterns' => 
       array (
-        0 => '800',
+        0 => '70',
+      ),
+      'nationalPrefixFormattingRule' => '',
+      'domesticCarrierCodeFormattingRule' => '',
+    ),
+    3 => 
+    array (
+      'pattern' => '(800)(\\d{3})(\\d{4})',
+      'format' => '$1 $2 $3',
+      'leadingDigitsPatterns' => 
+      array (
+        0 => '80',
       ),
       'nationalPrefixFormattingRule' => '',
       'domesticCarrierCodeFormattingRule' => '',

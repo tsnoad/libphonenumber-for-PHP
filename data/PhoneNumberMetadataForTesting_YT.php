@@ -55,6 +55,6 @@ return array (
   array (
   ),
   'mainCountryForCode' => NULL,
-  'leadingDigits' => '269|639',
+  'leadingDigits' => '269|63',
   'leadingZeroPossible' => NULL,
 );
