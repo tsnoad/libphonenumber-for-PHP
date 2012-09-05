@@ -2354,7 +2354,7 @@ class Matcher {
 	 * @return bool
 	 */
 	public function lookingAt() {
-		$this->fullPatternMatchesNumber = preg_match_all('/^(?:' . str_replace('/', '\/', $this->pattern) . ')/', $this->subject, $this->groups, PREG_OFFSET_CAPTURE);
+		$this->fullPatternMatchesNumber = preg_match_all('/^(?:' . str_replace('/', '\/', $this->pattern) . ')/x', $this->subject, $this->groups, PREG_OFFSET_CAPTURE);
 		return $this->fullPatternMatchesNumber > 0;
 	}
 
