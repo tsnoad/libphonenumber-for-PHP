@@ -422,6 +422,12 @@ class PhoneNumberUtilTest extends \PHPUnit_Framework_TestCase {
 		$this->assertEquals("1800 123 456", $this->phoneUtil->format($auNumber, PhoneNumberFormat::NATIONAL));
 		$this->assertEquals("+61 1800 123 456", $this->phoneUtil->format($auNumber, PhoneNumberFormat::INTERNATIONAL));
 		$this->assertEquals("+611800123456", $this->phoneUtil->format($auNumber, PhoneNumberFormat::E164));
+
+		$auNumber2 = new PhoneNumber();
+		$auNumber2->setCountryCode(61)->setNationalNumber(406977557);
+		$this->assertEquals("0406 977 557", $this->phoneUtil->format($auNumber2, PhoneNumberFormat::NATIONAL));
+		$this->assertEquals("+61406 977 557", $this->phoneUtil->format($auNumber2, PhoneNumberFormat::INTERNATIONAL));
+		$this->assertEquals("+61406977557", $this->phoneUtil->format($auNumber2, PhoneNumberFormat::E164));
 	}
 
 	public function testFormatARNumber() {
