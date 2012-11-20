@@ -14,12 +14,7 @@ return array (
   ),
   'mobile' => 
   array (
-    'NationalNumberPattern' => '
-          6(?:
-            9[23]|
-            47
-          )\\d{6}
-        ',
+    'NationalNumberPattern' => '6(?:9[23]|47)\\d{6}',
     'PossibleNumberPattern' => '\\d{9}',
     'ExampleNumber' => '692123456',
   ),
@@ -31,22 +26,15 @@ return array (
   ),
   'premiumRate' => 
   array (
-    'NationalNumberPattern' => '89[1-37-9]\\d{6}',
+    'NationalNumberPattern' => '8(?:1[01]|2[0156]|84|9[0-37-9])\\d{6}',
     'PossibleNumberPattern' => '\\d{9}',
-    'ExampleNumber' => '891123456',
+    'ExampleNumber' => '810123456',
   ),
   'sharedCost' => 
   array (
-    'NationalNumberPattern' => '
-          8(?:
-            1[019]|
-            2[0156]|
-            84|
-            90
-          )\\d{6}
-        ',
-    'PossibleNumberPattern' => '\\d{9}',
-    'ExampleNumber' => '810123456',
+    'NationalNumberPattern' => 'NA',
+    'PossibleNumberPattern' => 'NA',
+    'ExampleNumber' => '',
   ),
   'noInternationalDialling' => 
   array (
@@ -76,7 +64,7 @@ return array (
   'intlNumberFormat' => 
   array (
   ),
-  'mainCountryForCode' => true,
-  'leadingDigits' => '262|6[49]|8',
+  'mainCountryForCode' => NULL,
+  'leadingDigits' => '262|6(?:9[23]|47)|8',
   'leadingZeroPossible' => NULL,
 );

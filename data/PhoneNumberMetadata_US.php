@@ -98,7 +98,7 @@ return array (
           )[2-9]\\d{6}
         ',
     'PossibleNumberPattern' => '\\d{7}(?:\\d{3})?',
-    'ExampleNumber' => '2012345678',
+    'ExampleNumber' => '2015550123',
   ),
   'mobile' => 
   array (
@@ -192,7 +192,7 @@ return array (
           )[2-9]\\d{6}
         ',
     'PossibleNumberPattern' => '\\d{7}(?:\\d{3})?',
-    'ExampleNumber' => '2012345678',
+    'ExampleNumber' => '2015550123',
   ),
   'tollFree' => 
   array (
@@ -240,7 +240,6 @@ return array (
       'format' => '$1-$2',
       'leadingDigitsPatterns' => 
       array (
-        0 => '[0-9]',
       ),
       'nationalPrefixFormattingRule' => '',
       'domesticCarrierCodeFormattingRule' => '',
@@ -251,7 +250,6 @@ return array (
       'format' => '($1) $2-$3',
       'leadingDigitsPatterns' => 
       array (
-        0 => '[0-9]',
       ),
       'nationalPrefixFormattingRule' => '',
       'domesticCarrierCodeFormattingRule' => '',
@@ -265,7 +263,6 @@ return array (
       'format' => '$1-$2-$3',
       'leadingDigitsPatterns' => 
       array (
-        0 => '[0-9]',
       ),
     ),
   ),

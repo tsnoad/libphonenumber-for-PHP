@@ -8,18 +8,13 @@ return array (
   ),
   'fixedLine' => 
   array (
-    'NationalNumberPattern' => '
-          2\\d(?:
-            [26-9]\\d|
-            \\d[26-9]
-          )\\d{5}
-        ',
+    'NationalNumberPattern' => '2\\d(?:[26-9]\\d|\\d[26-9])\\d{5}',
     'PossibleNumberPattern' => '\\d{9}',
     'ExampleNumber' => '222123456',
   ),
   'mobile' => 
   array (
-    'NationalNumberPattern' => '9[1-4]\\d{7}',
+    'NationalNumberPattern' => '9[1-3]\\d{7}',
     'PossibleNumberPattern' => '\\d{9}',
     'ExampleNumber' => '923123456',
   ),
@@ -50,6 +45,8 @@ return array (
   'id' => 'AO',
   'countryCode' => 244,
   'internationalPrefix' => '00',
+  'nationalPrefix' => '0~0',
+  'nationalPrefixForParsing' => '0~0',
   'sameMobileAndFixedLinePattern' => false,
   'numberFormat' => 
   array (
